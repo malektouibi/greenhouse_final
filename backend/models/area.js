@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
 
 const areaSchema = mongoose.Schema({
-    greenhouseId: Number,
-    name: String,
-    time: Date.now(),
-    data: {
-        light_intensity: Number,
-        relative_humidity: Number,
-        temperature: Number
+    greenhouseId: {
+        type: Number,
+        required: true
+    },
+    name: {
+        type: String,
+        required: true
     }
 }, { versionKey: false });
 
