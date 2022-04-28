@@ -1,9 +1,14 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const plantSchema = mongoose.Schema({
-    areaId: Number,
-    name: String,
-    quantity: Number
-}, { versionKey: false });
+const plantSchema = mongoose.Schema(
+  {
+    areaId: { String },
+    name: { String },
+    quantity: { Number },
+  },
+  {
+    timestamps: true,
+  }
+);
 
-module.exports = mongoose.model('Plant', plantSchema, 'plant');
+module.exports = mongoose.model("Plant", plantSchema, "plant");
